@@ -6,7 +6,6 @@ const labels = {
 
 function parseURL(app, setApp) {
   const { spaceId, host, accessToken, type, environmentId, contentTypeId } = app;
-  console.log('a', type, labels.spaces)
   switch (type) {
     case labels.spaces:
       setApp({

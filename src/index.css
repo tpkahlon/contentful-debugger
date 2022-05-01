@@ -1,13 +1,27 @@
-body {
+@import-normalize;
+
+.h1,
+.p {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.form-group {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.app,
+.ui,
+.form {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  gap: 15px;
+  display: flex;
+  padding-top: 15px;
+  border-top: 1px solid black;
 }

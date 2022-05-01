@@ -16,25 +16,23 @@ const UI = () => {
         .
       </p>
       <p className="p">
-        <strong>RESET</strong> button clears saved data in your browser.
+        <strong>RESET</strong> button clears saved data.
       </p>
       <p className="p">
-        <strong>SAVE</strong> button saves your options locally in your browser.
-        Next time, when you visit the page or refresh, your configuration will
-        be remembered and automatically filled.
+        <strong>SAVE</strong> button stores information submitted by user. Next
+        time, when page is visited or refreshed, stored options are dynamically
+        populated.
       </p>
       <p className="p">
-        <strong>GENERATE</strong> will create a <em>View JSON</em> link to view
-        returned response in JSON format. It will also create a{" "}
-        <em>View in Contentful</em> link to view entry in Contentful CMS.
+        <strong>GENERATE</strong> creates <em>View JSON</em> link to view
+        returned response in JSON format. It also creates{" "}
+        <em>View in Contentful</em> link to visit entry in Contentful CMS.
       </p>
       <p className="p">
-        <strong>View JSON</strong> can be used to check returned response in
-        JSON format.
+        <strong>View JSON</strong> opens returned response in a new tab.
       </p>
       <p className="p">
-        <strong>View in Contentful</strong> can be used to view entry within
-        Contentful.
+        <strong>View in Contentful</strong> opens returned response in Contentful CMS.
       </p>
     </div>
   );

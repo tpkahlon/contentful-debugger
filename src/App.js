@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { parseURL } from "./helpers";
 import AccessToken from "./components/AccessToken";
+import AssetID from "./components/AssetID";
 import ContentTypeID from "./components/ContentTypeID";
 import EntryID from "./components/EntryID";
 import EnvironmentID from "./components/EnvironmentID";
@@ -61,8 +62,9 @@ const App = () => {
           <Host />
           <SpaceID />
           <AccessToken />
-          <EnvironmentID />
+          <AssetID />
           <ContentTypeID />
+          <EnvironmentID />
           <EntryID />
           <Type />
           <Buttons />

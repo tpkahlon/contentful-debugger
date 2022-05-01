@@ -21,6 +21,8 @@ const Type = () => {
         <option value={labels?.contentTypeId}>Get a single content type</option>
         <option value={labels?.entries}>Get entries</option>
         <option value={labels?.entryId}>Get a single entry</option>
+        <option value={labels?.assets}>Get assets</option>
+        <option value={labels?.assetId}>Get a single asset</option>
       </select>
     </div>
   );

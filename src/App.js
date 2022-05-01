@@ -23,6 +23,7 @@ const App = () => {
     type: "",
     query: "",
     url: "",
+    cms: "",
   };
   const appState = localStorage?.getItem(labels?.saveState) ? JSON.parse(localStorage?.getItem(labels?.saveState)) : initialState;
   const [app, setApp] = useState(appState);

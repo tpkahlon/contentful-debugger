@@ -29,6 +29,7 @@ function parseURL(app, setApp) {
       setApp({
         ...app,
         url: `https://${host}.contentful.com/${type}/${spaceId}?access_token=${accessToken}`,
+        cms: `https://app.contentful.com/${type}/${spaceId}?access_token=${accessToken}`,
       });
       break;
     case labels?.assets:
@@ -39,24 +40,28 @@ function parseURL(app, setApp) {
       setApp({
         ...app,
         url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/environments/${environmentId}/${type}?access_token=${accessToken}${queryString}`,
+        cms: `https://app.contentful.com/${labels?.spaces}/${spaceId}/environments/${environmentId}/${type}?access_token=${accessToken}${queryString}`,
       });
       break;
     case labels?.assetId:
       setApp({
         ...app,
         url: `https://${host}.contentful.com/spaces/${spaceId}/environments/${environmentId}/${labels?.assets}/${assetId}?access_token=${accessToken}`,
+        cms: `https://app.contentful.com/spaces/${spaceId}/environments/${environmentId}/${labels?.assets}/${assetId}?access_token=${accessToken}`,
       });
       break;
     case labels?.contentTypeId:
       setApp({
         ...app,
         url: `https://${host}.contentful.com/spaces/${spaceId}/environments/${environmentId}/${labels?.contentType}/${contentTypeId}?access_token=${accessToken}`,
+        cms: `https://app.contentful.com/spaces/${spaceId}/environments/${environmentId}/${labels?.contentType}/${contentTypeId}?access_token=${accessToken}`,
       });
       break;
     case labels?.entryId:
       setApp({
         ...app,
         url: `https://${host}.contentful.com/spaces/${spaceId}/environments/${environmentId}/${labels?.entries}/${entryId}?access_token=${accessToken}`,
+        cms: `https://app.contentful.com/spaces/${spaceId}/environments/${environmentId}/${labels?.entries}/${entryId}?access_token=${accessToken}`,
       });
       break;
     default:

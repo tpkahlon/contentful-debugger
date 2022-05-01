@@ -4,7 +4,7 @@ import AppContext from "../context/AppContext";
 
 const Buttons = () => {
   const { app, handleClick, handleSave, handleReset } = useContext(AppContext);
-  const { url } = app;
+  const { url, cms } = app;
   return (
     <>
       <div className="buttons">
@@ -15,11 +15,16 @@ const Buttons = () => {
           Save
         </a>
         <a href="#" onClick={handleClick}>
-          Generate URL
+          Generate
         </a>
         {url && (
           <a href={url} target="_blank" rel="noopener noreferrer">
-            View URL/JSON
+            View JSON
+          </a>
+        )}
+        {cms && (
+          <a href={cms} target="_blank" rel="noopener noreferrer">
+            View in Contentful
           </a>
         )}
       </div>

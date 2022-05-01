@@ -22,13 +22,22 @@ const App = () => {
     type: "",
     url: "",
   };
-  const [app, setApp] = useState(initialState);
+  const appState = localStorage?.getItem(labels?.saveState) ? JSON.parse(localStorage?.getItem(labels?.saveState)) : initialState;
+  const [app, setApp] = useState(appState);
   const handleChange = (e) => {
     const { name, value } = e?.target;
     setApp({
       ...app,
       [name]: value,
     });
+  };
+  const handleReset = (e) => {
+    e.preventDefault();
+    localStorage?.removeItem(labels?.saveState);
+  };
+  const handleSave = (e) => {
+    e.preventDefault();
+    localStorage?.setItem(labels?.saveState, JSON.stringify(app));
   };
   const handleClick = (e) => {
     e.preventDefault();
@@ -42,6 +51,8 @@ const App = () => {
         app,
         handleChange,
         handleClick,
+        handleSave,
+        handleReset,
       }}
     >
       <main className="app">

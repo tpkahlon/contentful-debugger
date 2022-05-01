@@ -3,17 +3,23 @@ import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
 const Buttons = () => {
-  const { app, handleClick } = useContext(AppContext);
+  const { app, handleClick, handleSave, handleReset } = useContext(AppContext);
   const { url } = app;
   return (
     <>
       <div className="buttons">
+        <a href="#" onClick={handleReset}>
+          Reset
+        </a>
+        <a href="#" onClick={handleSave}>
+          Save
+        </a>
         <a href="#" onClick={handleClick}>
           Generate URL
         </a>
         {url && (
           <a href={url} target="_blank" rel="noopener noreferrer">
-            Check URL/JSON
+            View URL/JSON
           </a>
         )}
       </div>

@@ -4,6 +4,7 @@ const labels = {
   contentTypeId: "content_type_id",
   entries: "entries",
   entryId: "entry_id",
+  saveState: "contentful_debugger_state"
 };
 
 function parseURL(app, setApp) {

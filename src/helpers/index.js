@@ -17,11 +17,13 @@ function parseURL(app, setApp) {
     host,
     accessToken,
     type,
+    query,
     environmentId,
     entryId,
     assetId,
     contentTypeId,
   } = app;
+  const queryString = query ? `&${query.trim()}` : '';
   switch (type) {
     case labels.spaces:
       setApp({
@@ -36,7 +38,7 @@ function parseURL(app, setApp) {
     case labels?.tags:
       setApp({
         ...app,
-        url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/environments/${environmentId}/${type}?access_token=${accessToken}`,
+        url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/environments/${environmentId}/${type}?access_token=${accessToken}${queryString}`,
       });
       break;
     case labels?.assetId:

@@ -21,6 +21,7 @@ const App = () => {
     contentTypeId: "",
     environmentId: "master",
     type: "",
+    query: "",
     url: "",
   };
   const appState = localStorage?.getItem(labels?.saveState) ? JSON.parse(localStorage?.getItem(labels?.saveState)) : initialState;

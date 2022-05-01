@@ -2,6 +2,8 @@ const labels = {
   saveState: "contentful_debugger_state",
   spaces: "spaces",
   entries: "entries",
+  tags: "tags",
+  locales: "locales",
   assets: "assets",
   assetId: "asset_id",
   contentType: "content_types",
@@ -30,6 +32,8 @@ function parseURL(app, setApp) {
     case labels?.assets:
     case labels?.contentType:
     case labels?.entries:
+    case labels?.locales:
+    case labels?.tags:
       setApp({
         ...app,
         url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/environments/${environmentId}/${type}?access_token=${accessToken}`,

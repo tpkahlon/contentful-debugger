@@ -23,6 +23,8 @@ const Type = () => {
         <option value={labels?.entryId}>Get a single entry</option>
         <option value={labels?.assets}>Get assets</option>
         <option value={labels?.assetId}>Get a single asset</option>
+        <option value={labels?.locales}>Get locales</option>
+        <option value={labels?.tags}>Get tags</option>
       </select>
     </div>
   );

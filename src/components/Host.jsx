@@ -17,7 +17,7 @@ const Host = () => {
       >
         <option value="">Select Host</option>
         <option value="cdn">CDN</option>
-        {/* <option value="preview">Preview</option> */}
+        <option value="preview">Preview</option>
       </select>
     </div>
   );

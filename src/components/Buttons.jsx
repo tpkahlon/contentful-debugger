@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
-const Search = () => {
+const Buttons = () => {
   const { app, handleClick } = useContext(AppContext);
   const { url } = app;
   return (
@@ -36,4 +36,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Buttons;

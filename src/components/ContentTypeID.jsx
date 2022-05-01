@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
-const EnvironmentID = () => {
+const ContentTypeID = () => {
   const { app, handleChange, labels } = useContext(AppContext);
   const { type, contentTypeId } = app;
   return (
@@ -23,4 +23,4 @@ const EnvironmentID = () => {
   );
 };
 
-export default EnvironmentID;
+export default ContentTypeID;

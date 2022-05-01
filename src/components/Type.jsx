@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
-const Host = () => {
+const Type = () => {
   const { app, handleChange, labels } = useContext(AppContext);
   const { type } = app;
   return (
@@ -19,9 +19,11 @@ const Host = () => {
         <option value={labels?.spaces}>Get space</option>
         <option value={labels?.contentType}>Get content model</option>
         <option value={labels?.contentTypeId}>Get a single content type</option>
+        <option value={labels?.entries}>Get entries</option>
+        <option value={labels?.entryId}>Get a single entry</option>
       </select>
     </div>
   );
 };
 
-export default Host;
+export default Type;

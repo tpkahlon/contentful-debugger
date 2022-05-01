@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { parseURL } from "./helpers";
 import AccessToken from "./components/AccessToken";
 import ContentTypeID from "./components/ContentTypeID";
+import EntryID from "./components/EntryID";
 import EnvironmentID from "./components/EnvironmentID";
 import Host from "./components/Host";
 import SpaceID from "./components/SpaceID";
@@ -51,6 +52,7 @@ const App = () => {
           <AccessToken />
           <EnvironmentID />
           <ContentTypeID />
+          <EntryID />
           <Type />
           <Buttons />
         </div>

@@ -9,7 +9,7 @@ const UI = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization/structure-of-deleted-entities/query-deleted-entries/console"
+          href="https://www.contentful.com/developers/docs/references/content-delivery-api/"
         >
           check their documentation
         </a>

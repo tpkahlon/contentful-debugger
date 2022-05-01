@@ -7,7 +7,7 @@ const UI = () => {
   // const { spaceId, accessToken, url } = app;
   return (
     <div className="ui">
-      <h1 className="h1">Contentful API</h1>
+      <h1 className="h1">Contentful Debugger</h1>
       <p className="p">
         Test API endpoints provided by Contentful. For more information,{" "}
         <a

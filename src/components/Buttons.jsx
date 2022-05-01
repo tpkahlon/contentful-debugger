@@ -21,11 +21,11 @@ const Search = () => {
         <div>
           <strong>Source code:</strong>{" "}
           <a
-            href="https://github.com/tpkahlon/contentful-api"
+            href="https://github.com/tpkahlon/contentful-debugger"
             target="_blank"
             rel="noopener noreferrer"
           >
-            contentful-api
+            contentful-debugger
           </a>
         </div>
         <div>

@@ -1,5 +1,5 @@
 {
-  "name": "contentful-api",
+  "name": "contentful-debugger",
   "version": "0.0.1",
   "private": true,
   "dependencies": {

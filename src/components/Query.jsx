@@ -3,10 +3,10 @@ import AppContext from "../context/AppContext";
 
 const Query = () => {
   const { app, handleChange, labels } = useContext(AppContext);
-  const { query, host } = app;
+  const { query, host, type } = app;
   return (
     <>
-      {host && host !== labels?.api && (
+      {host && type && host !== labels?.api && (
         <div className="form-group">
           <label htmlFor="query">Query:</label>
           <input

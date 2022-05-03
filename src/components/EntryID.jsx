@@ -6,7 +6,7 @@ const EntryID = () => {
   const { type, entryId, host } = app;
   return (
     <>
-      {host && host !== labels?.api && type === labels?.entryId && (
+      {host && type && host !== labels?.api && type === labels?.entryId && (
         <div className="form-group">
           <label htmlFor="entryId">Entry ID:</label>
           <input

@@ -64,13 +64,13 @@ const App = () => {
         <UI />
         <div className="form">
           <Host />
+          <Type />
           <SpaceID />
           <AccessToken />
           <AssetID />
           <ContentTypeID />
           <EnvironmentID />
           <EntryID />
-          <Type />
           <Buttons />
           <Footer />
         </div>

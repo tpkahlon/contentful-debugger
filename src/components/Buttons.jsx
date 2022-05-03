@@ -5,10 +5,10 @@ import AppContext from "../context/AppContext";
 const Buttons = () => {
   const { app, handleClick, handleSave, handleReset, labels } =
     useContext(AppContext);
-  const { url, cms, host } = app;
+  const { url, cms, host, type } = app;
   return (
     <>
-      {host && (
+      {host && type && (
         <>
           <div className="buttons">
             <a href="#" onClick={handleReset}>

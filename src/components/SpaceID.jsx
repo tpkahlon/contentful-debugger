@@ -6,7 +6,7 @@ const SpaceID = () => {
   const { spaceId, host, type } = app;
   return (
     <>
-      {host && type !== labels?.pat && type !== labels?.allOrganizations && type !== labels?.allSpaces && (
+      {host && type && type !== labels?.pat && type !== labels?.allOrganizations && type !== labels?.allSpaces && (
         <div className="form-group">
           <label htmlFor="spaceId">Space ID:</label>
           <input

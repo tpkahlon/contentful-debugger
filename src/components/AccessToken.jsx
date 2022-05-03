@@ -3,10 +3,10 @@ import AppContext from "../context/AppContext";
 
 const AccessToken = () => {
   const { app, handleChange } = useContext(AppContext);
-  const { accessToken, host } = app;
+  const { accessToken, host, type } = app;
   return (
     <>
-      {host && (
+      {host && type && (
         <div className="form-group">
           <label htmlFor="accessToken">Access Token:</label>
           <input

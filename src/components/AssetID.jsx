@@ -6,7 +6,7 @@ const AssetID = () => {
   const { type, assetId, host } = app;
   return (
     <>
-      {host && host !== labels?.api && type === labels?.assetId && (
+      {host && type && host !== labels?.api && type === labels?.assetId && (
         <div className="form-group">
           <label htmlFor="assetId">Asset ID:</label>
           <input

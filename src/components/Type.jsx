@@ -9,7 +9,6 @@ const Type = () => {
     <>
       {host && (
         <>
-          <Query />
           <div className="form-group">
             <label htmlFor="type">Type:</label>
             <select
@@ -104,6 +103,7 @@ const Type = () => {
               </option>
             </select>
           </div>
+          <Query />
         </>
       )}
     </>

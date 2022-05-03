@@ -44,6 +44,12 @@ function parseURL(app, setApp) {
   const queryString = query ? `&${query.trim()}` : '';
   switch (type) {
     // Content Management
+    case labels?.allOrganizations:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.allOrganizations}?access_token=${accessToken}`,
+      });
+      break;
     case labels?.allSpaces:
       setApp({
         ...app,
@@ -90,12 +96,6 @@ function parseURL(app, setApp) {
       setApp({
         ...app,
         url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/${labels?.previewAPIKeys}?access_token=${accessToken}`,
-      });
-      break;
-    case labels?.allOrganizations:
-      setApp({
-        ...app,
-        url: `https://${host}.contentful.com/${labels?.allOrganizations}?access_token=${accessToken}`,
       });
       break;
     // Content Delivery/Preview

@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
 const SpaceID = () => {
-  const { app, handleChange } = useContext(AppContext);
-  const { spaceId, host } = app;
+  const { app, handleChange, labels } = useContext(AppContext);
+  const { spaceId, host, type } = app;
   return (
     <>
-      {host && (
+      {host && type !== labels?.pat && type !== labels?.allOrganizations && type !== labels?.allSpaces && (
         <div className="form-group">
           <label htmlFor="spaceId">Space ID:</label>
           <input

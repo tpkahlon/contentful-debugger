@@ -3,10 +3,10 @@ import AppContext from "../context/AppContext";
 
 const EnvironmentID = () => {
   const { app, handleChange, labels } = useContext(AppContext);
-  const { type, environmentId } = app;
+  const { host, type, environmentId } = app;
   return (
     <>
-      {type !== "" && type !== labels?.spaces && (
+      {host !== labels?.api && type !== "" && type !== labels?.spaces && (
         <div className="form-group">
           <label htmlFor="environmentId">Environment ID:</label>
           <input

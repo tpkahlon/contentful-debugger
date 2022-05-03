@@ -3,8 +3,8 @@ import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
 const Buttons = () => {
-  const { app, handleClick, handleSave, handleReset } = useContext(AppContext);
-  const { url, cms } = app;
+  const { app, handleClick, handleSave, handleReset, labels } = useContext(AppContext);
+  const { url, cms, host } = app;
   return (
     <>
       <div className="buttons">
@@ -22,7 +22,7 @@ const Buttons = () => {
             View JSON
           </a>
         )}
-        {cms && (
+        {host !== labels?.api && cms && (
           <a href={cms} target="_blank" rel="noopener noreferrer">
             View in Contentful
           </a>

@@ -16,6 +16,7 @@ const Host = () => {
         required
       >
         <option value="">Select Host</option>
+        <option value="api">API</option>
         <option value="cdn">CDN</option>
         <option value="preview">Preview</option>
       </select>

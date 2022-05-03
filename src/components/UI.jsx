@@ -5,11 +5,18 @@ const UI = () => {
     <div className="ui">
       <h1 className="h1">Contentful Debugger</h1>
       <p className="p">
-        Test API endpoints provided by Contentful. For more information,{" "}
+        This application provides a platform to make test calls to Content
+        Management/Preview/Delivery API endpoints. There are two different types
+        of tokens available. One is <em>Content delivery/preview token</em> and
+        another is <em>Content management token</em>. Content management token
+        can be used to make test calls to endpoint with <strong>API</strong>{" "}
+        host. Delivery/Preview token can be used to make test calls to{" "}
+        <strong>CDN/Preview</strong> host. Please make sure to generate valid
+        token for each API endpoint. For more information,{" "}
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.contentful.com/developers/docs/references/content-delivery-api/"
+          href="https://www.contentful.com/developers/docs/references/"
         >
           check their documentation
         </a>
@@ -32,7 +39,8 @@ const UI = () => {
         <strong>View JSON</strong> opens returned response in a new tab.
       </p>
       <p className="p">
-        <strong>View in Contentful</strong> opens returned response in Contentful CMS.
+        <strong>View in Contentful</strong> opens returned response in
+        Contentful CMS.
       </p>
     </div>
   );

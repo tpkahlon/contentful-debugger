@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { parseURL } from "./helpers";
+import { parseURL, labels } from "./helpers";
 import AccessToken from "./components/AccessToken";
 import AssetID from "./components/AssetID";
 import ContentTypeID from "./components/ContentTypeID";
@@ -11,7 +11,6 @@ import Type from "./components/Type";
 import UI from "./components/UI";
 import Buttons from "./components/Buttons";
 import AppContext from "./context/AppContext";
-import { labels } from "./helpers";
 
 const App = () => {
   const initialState = {
@@ -25,7 +24,9 @@ const App = () => {
     url: "",
     cms: "",
   };
-  const appState = localStorage?.getItem(labels?.saveState) ? JSON.parse(localStorage?.getItem(labels?.saveState)) : initialState;
+  const appState = localStorage?.getItem(labels?.saveState)
+    ? JSON.parse(localStorage?.getItem(labels?.saveState))
+    : initialState;
   const [app, setApp] = useState(appState);
   const handleChange = (e) => {
     const { name, value } = e?.target;

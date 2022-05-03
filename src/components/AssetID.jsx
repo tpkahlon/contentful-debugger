@@ -3,10 +3,10 @@ import AppContext from "../context/AppContext";
 
 const AssetID = () => {
   const { app, handleChange, labels } = useContext(AppContext);
-  const { type, assetId } = app;
+  const { type, assetId, host } = app;
   return (
     <>
-      {type === labels?.assetId && (
+      {host !== labels?.api && type === labels?.assetId && (
         <div className="form-group">
           <label htmlFor="assetId">Asset ID:</label>
           <input

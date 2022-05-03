@@ -1,4 +1,22 @@
 const labels = {
+  // HOST
+  api: "api",
+  preview: "preview",
+  cdn: "cdn",
+  // CMN
+  allOrganizations: "organizations",
+  allEnvironmentsAliases: "environment_aliases",
+  allEnvironments: "environments",
+  allHooks: "webhook_definitions",
+  allSpaces: "allSpaces",
+  previewAPIKeys: "preview_api_keys",
+  deliveryAPIKeys: "api_keys",
+  pat: "pat",
+  me: "me",
+  users: "users",
+  allRoles: "roles",
+  accessTokens: "access_tokens",
+  // CDN/CPN
   saveState: "contentful_debugger_state",
   spaces: "spaces",
   entries: "entries",
@@ -25,6 +43,62 @@ function parseURL(app, setApp) {
   } = app;
   const queryString = query ? `&${query.trim()}` : '';
   switch (type) {
+    // Content Management
+    case labels?.allSpaces:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.spaces}?access_token=${accessToken}${queryString}`,
+      });
+      break;
+    case labels?.pat:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.users}/${labels?.me}/${labels?.accessTokens}?access_token=${accessToken}${queryString}`,
+      });
+      break;
+    case labels?.allRoles:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/${labels?.allRoles}?access_token=${accessToken}`,
+      });
+      break;
+    case labels?.allHooks:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/${labels?.allHooks}?access_token=${accessToken}`,
+      });
+      break;
+    case labels?.allEnvironments:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/${labels?.allEnvironments}?access_token=${accessToken}`,
+      });
+      break;
+    case labels?.allEnvironmentsAliases:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/${labels?.allEnvironmentsAliases}?access_token=${accessToken}`,
+      });
+      break;
+    case labels?.deliveryAPIKeys:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/${labels?.deliveryAPIKeys}?access_token=${accessToken}`,
+      });
+      break;
+    case labels?.previewAPIKeys:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.spaces}/${spaceId}/${labels?.previewAPIKeys}?access_token=${accessToken}`,
+      });
+      break;
+    case labels?.allOrganizations:
+      setApp({
+        ...app,
+        url: `https://${host}.contentful.com/${labels?.allOrganizations}?access_token=${accessToken}`,
+      });
+      break;
+    // Content Delivery/Preview
     case labels.spaces:
       setApp({
         ...app,

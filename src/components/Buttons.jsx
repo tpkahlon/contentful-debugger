@@ -3,46 +3,36 @@ import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
 const Buttons = () => {
-  const { app, handleClick, handleSave, handleReset, labels } = useContext(AppContext);
+  const { app, handleClick, handleSave, handleReset, labels } =
+    useContext(AppContext);
   const { url, cms, host } = app;
   return (
     <>
-      <div className="buttons">
-        <a href="#" onClick={handleReset}>
-          Reset
-        </a>
-        <a href="#" onClick={handleSave}>
-          Save
-        </a>
-        <a href="#" onClick={handleClick}>
-          Generate
-        </a>
-        {url && (
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            View JSON
-          </a>
-        )}
-        {host !== labels?.api && cms && (
-          <a href={cms} target="_blank" rel="noopener noreferrer">
-            View in Contentful
-          </a>
-        )}
-      </div>
-      <div>
-        <div>
-          <strong>Source code:</strong>{" "}
-          <a
-            href="https://github.com/tpkahlon/contentful-debugger"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            contentful-debugger
-          </a>
-        </div>
-        <div>
-          <strong>Version:</strong> 0.0.1
-        </div>
-      </div>
+      {host && (
+        <>
+          <div className="buttons">
+            <a href="#" onClick={handleReset}>
+              Reset
+            </a>
+            <a href="#" onClick={handleSave}>
+              Save
+            </a>
+            <a href="#" onClick={handleClick}>
+              Generate
+            </a>
+            {host && url && (
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                View JSON
+              </a>
+            )}
+            {host && host !== labels?.api && cms && (
+              <a href={cms} target="_blank" rel="noopener noreferrer">
+                View in Contentful
+              </a>
+            )}
+          </div>
+        </>
+      )}
     </>
   );
 };

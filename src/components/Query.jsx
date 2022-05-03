@@ -6,7 +6,7 @@ const Query = () => {
   const { query, host } = app;
   return (
     <>
-      {host !== labels?.api && (
+      {host && host !== labels?.api && (
         <div className="form-group">
           <label htmlFor="query">Query:</label>
           <input

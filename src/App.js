@@ -10,6 +10,7 @@ import SpaceID from "./components/SpaceID";
 import Type from "./components/Type";
 import UI from "./components/UI";
 import Buttons from "./components/Buttons";
+import Footer from "./components/Footer";
 import AppContext from "./context/AppContext";
 
 const App = () => {
@@ -71,6 +72,7 @@ const App = () => {
           <EntryID />
           <Type />
           <Buttons />
+          <Footer />
         </div>
       </main>
     </AppContext.Provider>

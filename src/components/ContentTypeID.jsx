@@ -6,7 +6,7 @@ const ContentTypeID = () => {
   const { type, contentTypeId, host } = app;
   return (
     <>
-      {host !== labels?.api && type === labels?.contentTypeId && (
+      {host && host !== labels?.api && type === labels?.contentTypeId && (
         <div className="form-group">
           <label htmlFor="contentTypeId">Content Type ID:</label>
           <input

@@ -6,7 +6,7 @@ const EnvironmentID = () => {
   const { host, type, environmentId } = app;
   return (
     <>
-      {host !== labels?.api && type !== "" && type !== labels?.spaces && (
+      {host && host !== labels?.api && type !== "" && type !== labels?.spaces && (
         <div className="form-group">
           <label htmlFor="environmentId">Environment ID:</label>
           <input
